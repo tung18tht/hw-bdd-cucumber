@@ -55,7 +55,11 @@ Then /^I should( not)? see movies of the rating (.*)/ do |not_see, rating|
   end
 end
 
+When(/^I check all ratings$/) do
+  step("I check the following ratings: #{@all_ratings}")
+end
+
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  fail "Unimplemented"
+  page.all('table#movies tbody tr').count.should == Movie.count
 end
