@@ -34,6 +34,27 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   end
 end
 
+Then /^I should( not)? see movies of the following ratings: (.*)/ do |not_see, rating_list|
+  rating_list.split.each do |rating|
+    if not_see
+      step("I should not see movies of the rating #{rating}")
+    else
+      step("I should see movies of the rating #{rating}")
+    end
+  end
+end
+
+Then /^I should( not)? see movies of the rating (.*)/ do |not_see, rating|
+  @movies = Movie.where(rating: rating)
+  @movies.each do |movie|
+    if not_see
+      step("I should not see \"#{movie.title}\"")
+    else
+      step("I should see \"#{movie.title}\"")
+    end
+  end
+end
+
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
   fail "Unimplemented"
