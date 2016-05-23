@@ -518,3 +518,85 @@ Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-05-08 15:
 
 
 Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-05-08 15:03:16 +0700
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2016-05-23 17:08:03 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-05-23 17:08:06 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://0.0.0.0:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=release_date
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=release_date" for 127.0.0.1 at 2016-05-23 17:08:06 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 149ms (Views: 142.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-05-23 17:08:06 +0700
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:08:06 +0700
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:08:06 +0700
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:08:06 +0700
+
+
+Started GET "/movies" for 127.0.0.1 at 2016-05-23 17:24:10 +0700
+Processing by MoviesController#index as HTML
+Redirected to http://0.0.0.0:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=release_date
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=release_date" for 127.0.0.1 at 2016-05-23 17:24:10 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 186ms (Views: 180.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-05-23 17:24:11 +0700
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:24:11 +0700
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:24:11 +0700
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:24:11 +0700
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=title" for 127.0.0.1 at 2016-05-23 17:24:12 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+Redirected to http://0.0.0.0:3000/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=title
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&sort=title" for 127.0.0.1 at 2016-05-23 17:24:12 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1"}, "sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13')  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 127.0.0.1 at 2016-05-23 17:24:12 +0700
+
+
+Started GET "/assets/jquery.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:24:12 +0700
+
+
+Started GET "/assets/application.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:24:12 +0700
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 127.0.0.1 at 2016-05-23 17:24:12 +0700

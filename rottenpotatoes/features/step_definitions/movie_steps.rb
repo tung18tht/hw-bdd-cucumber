@@ -63,3 +63,14 @@ Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
   page.all('table#movies tbody tr').count.should == Movie.count
 end
+
+Then(/^I should see movies (.*) in order$/) do |sort|
+  @movies = Movie.order(sort)
+  (1...Movie.count).each do |i|
+    if sort == "title"
+      step("I should see \"#{@movies[i-1].title}\" before \"#{@movies[i].title}\"")
+    else
+      step("I should see \"#{@movies[i-1].release_date}\" before \"#{@movies[i].release_date}\"")
+    end
+  end
+end
